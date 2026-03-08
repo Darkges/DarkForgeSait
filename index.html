@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Dark Forge — Игры студии</title>
+    <title>Luna Axlt Studios Games — Игры студии</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,10 @@
         }
 
         body {
-            background: #0a0a0a;
+            background: #0a0c12;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(155, 89, 182, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(155, 89, 182, 0.1) 0%, transparent 40%);
             color: #fff;
             padding: 15px;
             min-height: 100vh;
@@ -36,9 +39,10 @@
         .header h1 {
             font-size: 2.8rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #f5cb5c, #d4af37);
+            background: linear-gradient(135deg, #9b59b6, #b07cc6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(155, 89, 182, 0.5);
             margin-bottom: 8px;
         }
 
@@ -68,14 +72,16 @@
             padding: 40px 30px;
             max-width: 500px;
             width: 100%;
-            border: 3px solid #f5cb5c;
+            border: 3px solid #9b59b6;
             text-align: center;
+            box-shadow: 0 0 30px rgba(155, 89, 182, 0.5);
         }
 
         .maintenance-card h2 {
             font-size: 3rem;
-            color: #f5cb5c;
+            color: #9b59b6;
             margin-bottom: 20px;
+            text-shadow: 0 0 15px #9b59b6;
         }
 
         .maintenance-card p {
@@ -87,12 +93,12 @@
         .maintenance-card .social-link {
             display: inline-block;
             background: #2a2a2a;
-            color: #f5cb5c;
+            color: #9b59b6;
             padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-size: 1.2rem;
-            border: 2px solid #f5cb5c;
+            border: 2px solid #9b59b6;
             margin-top: 15px;
         }
 
@@ -105,13 +111,14 @@
         }
 
         .game-card {
-            background: #1a1a1a;
+            background: #1e1e1e;
             border-radius: 28px;
             padding: 25px 20px;
             border: 1px solid #2a2a2a;
             position: relative;
             overflow: hidden;
             width: 100%;
+            box-shadow: 0 0 20px rgba(155, 89, 182, 0.2);
         }
 
         .game-card::before {
@@ -121,7 +128,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #f5cb5c, #b8860b);
+            background: linear-gradient(90deg, #9b59b6, #b07cc6);
         }
 
         .game-icon {
@@ -132,8 +139,9 @@
         .game-title {
             font-size: 2rem;
             font-weight: 700;
-            color: #f5cb5c;
+            color: #9b59b6;
             margin-bottom: 8px;
+            text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
         }
 
         .game-desc {
@@ -143,28 +151,35 @@
 
         .download-btn {
             background: none;
-            border: 2px solid #f5cb5c;
-            color: #f5cb5c;
+            border: 2px solid #9b59b6;
+            color: #9b59b6;
             padding: 16px 20px;
             border-radius: 60px;
             font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
             width: 100%;
+            transition: all 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #9b59b6;
+            color: #121212;
         }
 
         /* Секции */
         .section {
-            background: #1a1a1a;
+            background: #1e1e1e;
             border-radius: 28px;
             padding: 25px 20px;
             margin-bottom: 25px;
             border: 1px solid #2a2a2a;
+            box-shadow: 0 0 15px rgba(155, 89, 182, 0.2);
         }
 
         .section-title {
             font-size: 1.8rem;
-            color: #f5cb5c;
+            color: #9b59b6;
             margin-bottom: 20px;
         }
 
@@ -188,7 +203,7 @@
         }
 
         .contact-value {
-            color: #f5cb5c;
+            color: #9b59b6;
             font-size: 1.2rem;
             font-weight: 600;
         }
@@ -196,14 +211,20 @@
         .forum-link {
             display: block;
             background: #232323;
-            color: #f5cb5c;
+            color: #9b59b6;
             padding: 18px 20px;
             border-radius: 60px;
             text-decoration: none;
             font-size: 1.2rem;
-            border: 2px solid #f5cb5c;
+            border: 2px solid #9b59b6;
             margin-top: 15px;
             text-align: center;
+            transition: all 0.2s;
+        }
+
+        .forum-link:hover {
+            background: #9b59b6;
+            color: #121212;
         }
 
         .tester-box {
@@ -211,13 +232,13 @@
             border-radius: 28px;
             padding: 30px 20px;
             text-align: center;
-            border: 2px dashed #f5cb5c;
+            border: 2px dashed #9b59b6;
             margin-bottom: 25px;
         }
 
         .tester-box h2 {
             font-size: 2.2rem;
-            color: #f5cb5c;
+            color: #9b59b6;
             margin-bottom: 15px;
         }
 
@@ -255,7 +276,7 @@
             padding: 30px 20px;
             max-width: 400px;
             width: 100%;
-            border: 2px solid #f5cb5c;
+            border: 2px solid #9b59b6;
         }
 
         .popup-header {
@@ -267,7 +288,7 @@
 
         .popup-title {
             font-size: 2rem;
-            color: #f5cb5c;
+            color: #9b59b6;
             font-weight: 700;
         }
 
@@ -291,6 +312,12 @@
             align-items: center;
             gap: 15px;
             text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .popup-link:hover {
+            background: #333;
+            border-left: 3px solid #9b59b6;
         }
 
         .popup-link-icon {
@@ -303,7 +330,7 @@
         }
 
         .popup-link-arrow {
-            color: #f5cb5c;
+            color: #9b59b6;
         }
 
         .popup-message {
@@ -313,7 +340,7 @@
 
         .popup-message h3 {
             font-size: 3rem;
-            color: #f5cb5c;
+            color: #9b59b6;
             margin-bottom: 20px;
         }
 
@@ -327,30 +354,18 @@
 </head>
 <body>
     <!-- ТЕХНИЧЕСКИЙ ПЕРЕРЫВ -->
-    <!-- ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ -->
-    <!--                                   -->
-    <!--   ЗДЕСЬ УПРАВЛЕНИЕ ПЕРЕРЫВОМ      -->
-    <!--                                   -->
-    <!--   true  = перерыв ВКЛЮЧЕН         -->
-    <!--   false = перерыв ВЫКЛЮЧЕН        -->
-    <!--                                   -->
-    <!--   МЕНЯЙ ТОЛЬКО ЭТУ СТРОКУ!        -->
-    <!--                                   -->
-    <div id="maintenanceOverlay" class="maintenance-overlay" style="display: flex;">
-    <!--                                   -->
-    <!-- ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡ -->
-
+    <div id="maintenanceOverlay" class="maintenance-overlay" style="display: none;">
         <div class="maintenance-card">
             <h2>🔧 Технический перерыв</h2>
             <p>К сожалению, сайт временно недоступен</p>
             <p style="font-size: 1rem; color: #888;">Вся информация в наших соцсетях:</p>
-            <a href="https://t.me/darkforge_of" class="social-link" target="_blank">📱 Telegram канал @darkforge_of</a>
+            <a href="https://t.me/LunaAxlt" class="social-link" target="_blank">📱 Telegram канал @LunaAxltStudiosGames </a>
         </div>
     </div>
 
     <div class="container">
         <div class="header">
-            <h1>Dark Forge</h1>
+            <h1>Luna Axlt Studios Games</h1>
             <p>ИГРЫ СТУДИИ</p>
         </div>
 
@@ -382,8 +397,8 @@
         <div class="tester-box">
             <h2>🎯 Ищем тестеров!</h2>
             <p>Активно ведётся разработка игр и уже проходят закрытые тестирования.</p>
-            <p style="color: #f5cb5c; font-size: 1.3rem;">Хочешь попасть в команду тестеров?</p>
-            <p>Пиши в поддержку: @supDarkForgebot</p>
+            <p style="color: #9b59b6; font-size: 1.3rem;">Хочешь попасть в команду тестеров?</p>
+            <p>Пиши в поддержку: @LunaAxltsupportbot</p>
             <div class="dev-info">
                 🔥 Ryam World · Quest Messenger · 3D Хоррор
             </div>
@@ -392,7 +407,7 @@
         <!-- ФОРУМ -->
         <div class="section" style="text-align: center;">
             <div class="section-title" style="justify-content: center;">💬 Наш форум</div>
-            <a href="https://Darkges.github.io/Infdarform/" class="forum-link" target="_blank">Перейти на форум Dark Forge</a>
+            <a href="https://LunaAxlt.github.io/forum" class="forum-link" target="_blank">Перейти на форум Luna Axlt</a>
         </div>
 
         <!-- СВЯЗЬ -->
@@ -401,21 +416,21 @@
             <div class="contacts-grid">
                 <div class="contact-item">
                     <div class="contact-label">Официальный аккаунт</div>
-                    <div class="contact-value">@DarkForgeOfficial</div>
+                    <div class="contact-value">@LunaAxlt</div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-label">Менеджер</div>
-                    <div class="contact-value">@DarkForgeManger</div>
+                    <div class="contact-value">@LunaAxltofficial</div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-label">Техническая поддержка</div>
-                    <div class="contact-value">@supDarkForgebot</div>
+                    <div class="contact-value">@LunaAxltsupportbot</div>
                 </div>
             </div>
         </div>
 
         <div class="footer">
-            Dark Forge Studio · Все права защищены · 2026
+            Luna Axlt Studios Games · Все права защищены · 2026
         </div>
     </div>
 
@@ -427,12 +442,12 @@
                 <span class="popup-close" onclick="closePopup('gamePopup')">×</span>
             </div>
             <div class="popup-links">
-                <a href="https://t.me/dark_Fails" class="popup-link" target="_blank">
+                <a href="https://t.me/Luna_Fails" class="popup-link" target="_blank">
                     <span class="popup-link-icon">📱</span>
                     <span class="popup-link-text">Скачать в Telegram</span>
                     <span class="popup-link-arrow">→</span>
                 </a>
-                <a href="https://vk.ru/darkforg" class="popup-link" target="_blank">
+                <a href="https://vk.ru/lunaaxlt" class="popup-link" target="_blank">
                     <span class="popup-link-icon">📘</span>
                     <span class="popup-link-text">Скачать ВКонтакте</span>
                     <span class="popup-link-arrow">→</span>
@@ -475,4 +490,4 @@
         }
     </script>
 </body>
-  </html>
+</html>
